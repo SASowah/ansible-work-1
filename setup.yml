@@ -1,0 +1,22 @@
+---
+- name: play 1  Ensure /opt/devops directory exists
+  hosts: all
+  become: yes
+  tasks: 
+    - name: Create /opt/devops directory
+      file:
+       path: /opt/devops
+       state: directory
+
+
+- name: play 2 Create file with content
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create info.txt with content
+      copy:
+       dest: /opt/devops/info.txt
+       content: "Hello from Ansible"
+...
+
+  
