@@ -1,0 +1,18 @@
+# single play
+---
+- name: Deploy Web App
+  hosts: node2
+  become: yes
+
+  tasks:
+  - name: Install git
+    yum:
+      name: git
+      state: present
+
+  - name: Host code
+    git:
+      repo: https://github.com/SASowah/ansible-work-1.git
+      dest: /var/www/html
+      version: dev
+...
