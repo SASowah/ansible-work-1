@@ -7,7 +7,7 @@
   - name: Create Directory
     file:
       path: /home/fedora/new_dir
-      state: direcrory
+      state: directory
 
   - name: Create Directoy
     file: 
