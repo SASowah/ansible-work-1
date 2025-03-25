@@ -1,0 +1,19 @@
+# single play
+---
+- name: Deploy Web App
+  hosts: node2
+  become: yes
+
+  tasks:
+  - name: Install git
+    yum:
+      name: git
+      state: present
+
+  - name: Host code
+    git:
+      repo: https://github.com/CeeyIT-Solutions/food3.git
+      dest: /var/www/html
+      force: yes
+
+...
