@@ -9,6 +9,7 @@
   - name: update package cache
     apt:
       update_cache: yes
+
   - name: Install apache2
     apt:
       name: apache2
@@ -18,5 +19,10 @@
     service: 
       name: apache2
       state: started
+
+  - name: Enable apache2
+    service: 
+      name: apache2
+      enabled: yes
 
 ...
