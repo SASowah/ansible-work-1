@@ -1,8 +1,11 @@
 ---
 - name: Website under maintenenace
-  hosts: node
+  hosts: Group3
   become: yes
 
   tasks:
-  - name: 
+  - name: update maintenance
     copy: 
+      src: Maintenance.html
+      dest: /var/www/html/index.html
+...
