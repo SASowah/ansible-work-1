@@ -29,7 +29,7 @@
       state: directory
 
 - name: update ubuntu servers
-  hosts: ubuntu server
+  hosts: ubuntu servers
 
   tasks:
   - name: create directory
