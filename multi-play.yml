@@ -10,23 +10,23 @@
       state: direcrory
 
   - name: Create Directoy
-    file:
-    path: /home/fedora/new_dir_1
-    state: directory
+    file: 
+      path: /home/fedora/new_dir_1
+      state: directory
 
 - name: update node3 servers
   hosts: node3
 
   taskes:
   - name: Create Directory
-    files:
-    path: /home/fedora/new_dir_1
-    state: directory
+    file:
+      path: /home/fedora/new_dir_1
+      state: directory
 
   - name: create directory
-    files:
-    path: /home/fedora/new_dir_2
-    state: directory
+    file:
+      path: /home/fedora/new_dir_2
+      state: directory
 
 - name: update ubuntu servers
   hosts: ubuntu server
@@ -34,11 +34,11 @@
   tasks:
   - name: create directory
     file:
-    path: /home/fedora/new_dir_grp-U
-    state: directory
+      path: /home/fedora/new_dir_grp-U
+      state: directory
     
   - name: create directory
     file:
-    path: /home/fedora/new-dir_grp-U2
-    state: directory
+      path: /home/fedora/new-dir_grp-U2
+      state: directory
 ...
