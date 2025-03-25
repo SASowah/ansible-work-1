@@ -18,5 +18,5 @@
 
   - name: Enable HTTPD
     service:
-    name: httpd
-    enabled: yes
+      name: httpd
+      enabled: yes
