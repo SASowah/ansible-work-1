@@ -1,6 +1,6 @@
 ---
 - name: Website under maintenenace
-  hosts: Group3
+  hosts: node3
   become: yes
 
   tasks:
