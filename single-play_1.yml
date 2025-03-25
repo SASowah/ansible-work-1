@@ -1,3 +1,4 @@
+# single play
 ---
 - name: Update group1 servers
   hosts: Group1
