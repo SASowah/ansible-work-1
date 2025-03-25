@@ -12,7 +12,7 @@
 
   - name: Host code
     git:
-      repo: https://github.com/SASowah/ansible-work-1.git
+      repo: https://github.com/CeeyIT-Solutions/ecomm-3.git
       dest: /var/www/html
-      version: dev
+      
 ...
