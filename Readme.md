@@ -1,8 +1,21 @@
 ## Ansible-Work-1 Project
 # Overview
-This is a test project to automate server configuration using Ansible. It will includes playbooks for installing packages, setting up users, and configuring services.
+This is a test project to automate server configuration using Ansible. It includes playbooks for:
+✅ Installing packages
+✅ Setting up users
+✅ Configuring services
+✅ Managing files and directories
 
 # Prerequisites
 Ansible Installed (ansible --version)
 SSH access to target machines
 Proper inventory file setup (hostinventory.ini)
+
+# Project Structure
+ansible-work-1/
+│── hostinventory.ini   # Inventory file with managed nodes
+│── Readme.md           # Project documentation
+│── sample.yml          # Main Ansible playbook
+│── setup.yml           # System setup playbook
+│── delete_devops.yml   # Cleanup playbook
+│── single-play_1.yml   
