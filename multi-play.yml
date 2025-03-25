@@ -30,6 +30,7 @@
 
 - name: update ubuntu servers
   hosts: ubuntu servers
+  become: yes
 
   tasks:
   - name: create directory
