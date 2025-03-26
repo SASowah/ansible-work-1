@@ -1,0 +1,91 @@
+# single play
+---
+- name: Install HTTP server
+  become: yes
+  hosts: Group1
+  
+
+  tasks:
+  - name: Install HTTPD
+    yum:
+      name: httpd
+      state: present
+    when: ansible_distribution == "Fedora"
+
+  - name: start up HTTPD
+    service: 
+      name: httpd
+      state: started
+    when: ansible_distribution == "Fedora"
+
+  - name: Enable HTTPD
+    service:
+      name: httpd
+      enabled: yes
+    when: ansible_distribution == "Fedora"
+
+  - name: Install HTTPD
+    yum:
+      name: httpd
+      state: present
+    when: ansible_distribution == "Amazon"
+
+  - name: start up HTTPD
+    service: 
+      name: httpd
+      state: started
+    when: ansible_distribution == "Amazon"
+
+  - name: Enable HTTPD
+    service:
+      name: httpd
+      enabled: yes
+    when: ansible_distribution == "Amazon"
+
+
+  - name: update package cache
+    apt:
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+  - name: Install apache2
+    apt:
+      name: apache2
+      state: present
+    when: ansible_distribution == "Ubuntu"
+
+  - name: start up apache service
+    service: 
+      name: apache2
+      state: started
+    when: ansible_distribution == "Ubuntu"
+
+  - name: Enable apache2
+    service: 
+      name: apache2
+      enabled: yes
+    when: ansible_distribution == "Ubuntu"
+
+  - name: update package cache
+    apt:
+      update_cache: yes
+    when: ansible_distribution == "Debian"
+
+  - name: Install apache2
+    apt:
+      name: apache2
+      state: present
+    when: ansible_distribution == "Debian"
+
+  - name: start up apache service
+    service: 
+      name: apache2
+      state: started
+    when: ansible_distribution == "Debian"
+
+  - name: Enable apache2
+    service: 
+      name: apache2
+      enabled: yes
+    when: ansible_distribution == "Debian"
+...
