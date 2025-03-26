@@ -1,6 +1,6 @@
 # single play
 ---
-- name: Install Apache on ubuntu
+- name: Install Apache on ubuntu server
   become: yes
   hosts: ubuntu
   
