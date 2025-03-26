@@ -1,0 +1,11 @@
+---
+- name: dynamic page
+  hosts: ubuntu
+  become: yes
+
+  tasks:
+  - name: update dynamic page
+    template: 
+      src: dynamic.j2
+      dest: /var/www/html/dynamic.html
+...
