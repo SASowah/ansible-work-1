@@ -9,7 +9,7 @@ This is a test project to automate server configuration using Ansible. It includ
 # Prerequisites
 Ansible Installed (ansible --version)
 SSH access to target machines
-Proper inventory file setup (hostinventory.ini)
+Proper inventory file setup (inventory.ini)
 
 # Project Structure
 ansible-work-1/
@@ -19,3 +19,8 @@ ansible-work-1/
 │── setup.yml           # System setup playbook
 │── delete_devops.yml   # Cleanup playbook
 │── single-play_1.yml   
+
+## Playbooks Overview
+- `deploy_php.yml`: Deploys a PHP application.
+- `multi_os_playbook.yml`: Runs tasks on multiple OS platforms.
+- `install_java.yml`: Installs Java on target nodes.

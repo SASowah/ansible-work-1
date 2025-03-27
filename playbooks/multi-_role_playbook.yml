@@ -1,4 +1,3 @@
-# single play
 ---
 - name: Update node1 servers
   hosts: node1
