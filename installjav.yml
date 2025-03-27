@@ -1,0 +1,12 @@
+# test java installation
+---
+- name: Install java server
+  become: yes
+  hosts: Group1
+  
+
+  tasks:
+  - name: Install java
+    yum:
+      name: java
+      state: present

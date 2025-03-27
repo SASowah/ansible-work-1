@@ -1,0 +1,10 @@
+---
+- name: Update group1 servers
+  hosts: Group1
+
+  tasks:
+  - name: create directory
+    file:
+      path: /home/fedora/new_dir3
+      state: directory
+...	
