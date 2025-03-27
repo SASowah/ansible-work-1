@@ -1,0 +1,10 @@
+# single play
+---
+- name: Deploy Web App
+  hosts: Group1
+  become: yes
+
+  roles:
+  - apache
+  - html
+...

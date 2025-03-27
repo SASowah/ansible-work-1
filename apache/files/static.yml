@@ -1,0 +1,11 @@
+---
+- name: Static page
+  hosts: ubuntu
+  become: yes
+
+  tasks:
+  - name: update static page
+    copy: 
+      src: static.html
+      dest: /var/www/html/static.html
+...
