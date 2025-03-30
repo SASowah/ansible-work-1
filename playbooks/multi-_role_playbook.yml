@@ -1,0 +1,44 @@
+---
+- name: Update node1 servers
+  hosts: node1
+
+  tasks:
+  - name: Create Directory
+    file:
+      path: /home/fedora/new_dir
+      state: directory
+
+  - name: Create Directoy
+    file: 
+      path: /home/fedora/new_dir_1
+      state: directory
+
+- name: update node3 servers
+  hosts: node3
+
+  tasks:
+  - name: Create Directory
+    file:
+      path: /home/fedora/new_dir_1
+      state: directory
+
+  - name: create directory
+    file:
+      path: /home/fedora/new_dir_2
+      state: directory
+
+- name: update ubuntu servers
+  hosts: ubuntu servers
+  become: yes
+
+  tasks:
+  - name: create directory
+    file:
+      path: /home/fedora/new_dir_grp-U
+      state: directory
+    
+  - name: create directory
+    file:
+      path: /home/fedora/new-dir_grp-U2
+      state: directory
+...

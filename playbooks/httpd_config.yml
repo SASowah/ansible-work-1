@@ -1,0 +1,22 @@
+# single play
+---
+- name: Install HTTP server
+  become: yes
+  hosts: Group2
+  
+
+  tasks:
+  - name: Install HTTPD
+    yum:
+      name: httpd
+      state: present
+
+  - name: start up HTTPD
+    service: 
+      name: httpd
+      state: started
+
+  - name: Enable HTTPD
+    service:
+      name: httpd
+      enabled: yes

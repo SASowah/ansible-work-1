@@ -1,0 +1,13 @@
+---
+- name: using variables
+  hosts: ubuntu
+  become: yes
+  vars:
+    username: Admin
+
+  tasks:
+  - name: update dynamic page
+    template: 
+      src: dynamic.j2
+      dest: /var/www/html/dynamic.html
+...

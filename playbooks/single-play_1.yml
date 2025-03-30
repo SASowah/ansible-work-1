@@ -1,0 +1,11 @@
+# single play
+---
+- name: Update group1 servers
+  hosts: Group1
+
+  tasks:
+  - name: Create Directory
+    file:
+      path: /home/fedora/new_dir
+      state: direcrory
+...

@@ -1,0 +1,11 @@
+---
+- name: Website under maintenenace
+  hosts: Group2
+  become: yes
+
+  tasks:
+  - name: update maintenance
+    copy: 
+      src: Maintenance.html
+      dest: /var/www/html/index.html
+...
